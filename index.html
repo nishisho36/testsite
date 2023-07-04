@@ -1,8 +1,39 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <title>TEST</title>
+    <script>
+        const url='https://script.google.com/macros/s/AKfycbx0LeEMDEP2VqJFtFmAWqjKc3cbEtNlgoyr1Dtk2qlmsMIvQ4slKAEFOpV11Gh5Nvdj/exec'
+        const redirect= (param)=>{
+            //try{
+            //    fetch(url+'?cpid='+param[1]).then(()=>{console.log('hey')}).catch(()=>{}) 
+        
+            //} catch(ex){}
+            //location.href=param[1]
+            let paramsx=JSON.parse(decodeURI(atob(param[1])))
+            let ifm=document.createElement('iframe');
+            ifm.src=url+'?id='+param[1];
+            ifm.setAttribute('frameborder','0');
+            ifm.onload=function(){location.href=paramsx[1]}
+            document.body.appendChild(ifm);
+        }
+        const params=document.location.search.replace(/[?]/g,'&').split('&');
+        
+        window.onload=function(){
+            for (i=0;i<params.length;i++){
+            let param=params[i].split('=')
+            if (param[0]=='id') {
+                redirect(param)
+                break;
+            }
+            }
+
+        }
+        </script>
+        
+</head>
 <body>
-    Hello
-    
+
 </body>
 </html>
