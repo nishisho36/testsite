@@ -6,14 +6,20 @@
 <body>
 <script src=""></script>
   <script>
-//function callback(data) {
-//  console.log(data);
-//}
+fetch('https://script.google.com/macros/s/AKfycbwbVsxhKMqOk1CrJyIraLMJ-E9RYiBNS9ze4jgg4vqZnRChYNKYxvXwbH6SScViP_oHlw/exec',
+    {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          //  'Access-Control-Allow-Origin': '*'
+        },
+        
+    })
+    .then((res) => {
+console.log(res);
+});
 
-const script = document.createElement('script');
-script.src = 'https://script.google.com/macros/s/AKfycbwbVsxhKMqOk1CrJyIraLMJ-E9RYiBNS9ze4jgg4vqZnRChYNKYxvXwbH6SScViP_oHlw/exec';
-document.body.appendChild(script);
-
+    
     
   </script>
 </body>
