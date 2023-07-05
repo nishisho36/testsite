@@ -4,20 +4,20 @@
 <head>
 </head>
 <body>
-<script src=""></script>
   <script>
-fetch('https://script.google.com/macros/s/AKfycbwbVsxhKMqOk1CrJyIraLMJ-E9RYiBNS9ze4jgg4vqZnRChYNKYxvXwbH6SScViP_oHlw/exec',
-    {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          //  'Access-Control-Allow-Origin': '*'
-        },
-        
-    })
-    .then((res) => {
-console.log(res);
-});
+    const postReservation = async (name, email) => {
+  const endPoint = 'https://script.google.com/macros/s/AKfycbwbVsxhKMqOk1CrJyIraLMJ-E9RYiBNS9ze4jgg4vqZnRChYNKYxvXwbH6SScViP_oHlw/exec';
+  const res = await fetch(endPoint, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `name=${name}&email=${email}`,
+  });
+  if (res.ok) console.log('okです！'); // okですね。
+};
+    
 
     
     
