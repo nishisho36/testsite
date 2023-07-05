@@ -15,7 +15,10 @@
             let ifm=document.createElement('iframe');
             ifm.src=url+'?id='+param[1];
             ifm.setAttribute('frameborder','0');
-            ifm.onload=function(){location.href=paramsx[1]}
+            ifm.onload=function(){location.href=paramsx[1];document.getElementById('waiting').style.display='none'}
+            //ifm.style.position='absolute';
+            //ifm.hidden=true;
+            
             document.body.appendChild(ifm);
         }
         const params=document.location.search.replace(/[?]/g,'&').split('&');
@@ -34,6 +37,6 @@
         
 </head>
 <body>
-
+    <div id="waiting">しばらくお待ちください...</div>
 </body>
 </html>
