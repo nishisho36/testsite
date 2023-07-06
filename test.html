@@ -5,17 +5,17 @@
 </head>
 <body>
   <script>
-   fetch('https://script.google.com/macros/s/AKfycbwbVsxhKMqOk1CrJyIraLMJ-E9RYiBNS9ze4jgg4vqZnRChYNKYxvXwbH6SScViP_oHlw/exec',
+   fetch('https://script.google.com/macros/s/AKfycbx0LeEMDEP2VqJFtFmAWqjKc3cbEtNlgoyr1Dtk2qlmsMIvQ4slKAEFOpV11Gh5Nvdj/exec?coid=1&shid=19NRDohSM5ZDs2RF5hx7-24DRTZpIwjPtDkk7wFuVR8Y',
     {
         method: 'GET',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
           
         },
+      payload : {}
         
     })
-    .then((res) => res.json()).then(data=>console.log(data));
-    
+    .then((res) => res.json()).then(data=>window.open(data[1],'_top',{}));
     
   </script>
 </body>
