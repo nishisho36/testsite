@@ -15,8 +15,8 @@
       payload : {}
         
     })
-    .then((res) => res.json()).then(data=>{
-      console.log(data[1]);
+    .then((res) => res.json()).then(json=>{
+      let data=JSON.parse(json);
       window.open(data[1],'_top',{})
     }
     );
