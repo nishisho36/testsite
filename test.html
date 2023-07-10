@@ -2,9 +2,6 @@
 <html>
 
 <head>
-</head>
-<body>
-  しばらくお待ちください...
   <script>
     async function makelog(){
     
@@ -24,6 +21,13 @@
     }
     );
     }
+    makelog();
+  </script>
+</head>
+<body>
+  しばらくお待ちください...
+  <script>
+    
     window.onload=function (){
       makelog();
       let encodedurl=location.search.split('up=')[1].split('&')[0];
