@@ -6,6 +6,8 @@
 <body>
   しばらくお待ちください...
   <script>
+    function async makelog(){
+    
     let url='https://script.google.com/macros/s/AKfycbx0LeEMDEP2VqJFtFmAWqjKc3cbEtNlgoyr1Dtk2qlmsMIvQ4slKAEFOpV11Gh5Nvdj/exec'+location.search;
    fetch(url,
     {
@@ -18,10 +20,14 @@
         
     })
     .then((res) => res.json()).then(data=>{
-      window.open(data[0],'_top',{})
+     
     }
     );
-    
+    }
+    window.onload=function (){
+      makelog();
+      window.setTimeout('window.open("https://www.msn.com","_top",{})',500) 
+    }
   </script>
 </body>
 </html>
