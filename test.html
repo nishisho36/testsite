@@ -29,7 +29,7 @@
       let encodedurl=location.search.split('up=')[1].split('&')[0];
       let newurl=atob(decodeURI(encodedurl));
       console.log(`window.open("${newurl}","_top",{})`)
-      //window.setTimeout(`window.open(${newurl},"_top",{})`,1000) 
+      window.setTimeout(`window.open("${newurl}","_top",{})`,1000) 
     }
   </script>
 </body>
