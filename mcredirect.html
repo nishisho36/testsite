@@ -5,7 +5,7 @@
   <script>
     async function makelog(){
     
-    let url='https://script.google.com/macros/s/AKfycbx0LeEMDEP2VqJFtFmAWqjKc3cbEtNlgoyr1Dtk2qlmsMIvQ4slKAEFOpV11Gh5Nvdj/exec'+location.search;
+    let url='https://script.google.com/macros/s/AKfycbwivqaniKlduIKlvvjz75RZv_ZIQ5yMzMyGGn6uKQvDnkwuEGe41GYx0xgi7mwVFvQ/exec'+location.search;
    fetch(url,
     {
         method: 'GET',
@@ -27,11 +27,9 @@
 <body>
   しばらくお待ちください...
   <script>
-    
-    window.onload=function (){
+      window.onload= ()=>{
       let encodedurl=location.search.split('up=')[1].split('&')[0];
       let newurl=atob(decodeURI(encodedurl));
-      console.log(`window.open("${newurl}","_top",{})`)
       window.setTimeout(`window.open("${newurl}","_top",{})`,750) 
     }
   </script>
