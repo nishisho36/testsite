@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    async function makelog(){
+    
+    let url='https://script.google.com/macros/s/AKfycbx0LeEMDEP2VqJFtFmAWqjKc3cbEtNlgoyr1Dtk2qlmsMIvQ4slKAEFOpV11Gh5Nvdj/exec'+location.search;
+   fetch(url,
+    {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          
+        },
+      payload : {}
+        
+    })
+    .then((res) => res.json()).then(data=>{
+     
+    }
+    );
+    }
+    makelog();
+  </script>
+</head>
+<body>
+  しばらくお待ちください...
+  <script>
+    
+    window.onload=function (){
+      let encodedurl=location.search.split('up=')[1].split('&')[0];
+      let newurl=atob(decodeURI(encodedurl));
+      console.log(`window.open("${newurl}","_top",{})`)
+      window.setTimeout(`window.open("${newurl}","_top",{})`,750) 
+    }
+  </script>
+</body>
+</html>
