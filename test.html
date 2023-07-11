@@ -29,7 +29,6 @@
   <script>
     
     window.onload=function (){
-      makelog();
       let encodedurl=location.search.split('up=')[1].split('&')[0];
       let newurl=atob(decodeURI(encodedurl));
       console.log(`window.open("${newurl}","_top",{})`)
